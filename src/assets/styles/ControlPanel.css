@@ -1,0 +1,197 @@
+.control-panel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  color: #333;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.control-panel {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.control-panel h2 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.select-plane {
+  background: #e8e8e8;
+  color: #333;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.select-plane:hover {
+  background: #d8d8d8;
+  border-color: #0056b3;
+}
+
+.select-plane:focus {
+  background: #ccc;
+  border-color: #007bff;
+}
+
+.details-and-actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.flight-details {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 60%;
+  height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+  overflow-y: auto;
+}
+
+.flight-details h2 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;  
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  margin: 5px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.start-button {
+  background: #28a745;
+}
+
+.start-button:hover {
+  background: #218838;
+}
+
+.stop-button {
+  background: #dc3545;
+}
+
+.stop-button:hover {
+  background: #c82333;
+}
+
+.start-button, .stop-button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.start-button[disabled], .stop-button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+
+.flight-logs {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 35%;
+  height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.flight-logs h2 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.flight-logs ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.flight-logs li {
+  background: #000;
+  color: #00ff00;
+  font-family: "Courier New", Courier, monospace;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.success-message {
+  color: green;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid green;
+  border-radius: 5px;
+  background-color: #eaffea;
+}
